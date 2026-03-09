@@ -115,3 +115,32 @@ body {
     .content { padding: 30px 20px; }
     .photo { width: 180px; height: 180px; }
 }
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .container {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+
+  p, ul, .project-item, section {
+    page-break-inside: avoid;
+  }
+
+}
